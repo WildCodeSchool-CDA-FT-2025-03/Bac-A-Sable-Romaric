@@ -22,6 +22,7 @@ repos.get("/:reposid", (req: Request, res: Response) => {
 
 // POST route to insert a new repo
 repos.post("/", (req: Request, res: Response) => {
+  console.log(req.body);
   res.status(200).send("Tout est ok pour l'ajout d'un repo");
 });
 

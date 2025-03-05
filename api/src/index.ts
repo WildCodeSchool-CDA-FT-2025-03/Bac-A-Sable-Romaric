@@ -6,6 +6,7 @@ const app = express();
 
 const PORT = process.env.EXPRESS_SERVER_PORT || 3000;
 
+app.use(express.json());
 app.use("/api", router);
 
 app.listen(PORT, () => {
