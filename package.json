@@ -1,0 +1,22 @@
+{
+  "name": "bac-a-sable-romaric",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool-CDA-FT-2025-03/Bac-A-Sable-Romaric.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool-CDA-FT-2025-03/Bac-A-Sable-Romaric/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool-CDA-FT-2025-03/Bac-A-Sable-Romaric#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
