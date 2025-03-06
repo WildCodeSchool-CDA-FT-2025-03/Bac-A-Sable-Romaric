@@ -1,2 +1,24 @@
 GET http://localhost:3010/api/repos HTTP/1.1
 content-type: application/json
+
+###
+GET http://localhost:3010/api/repos/763147 HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3010/api/repos HTTP/1.1
+content-type: application/json
+
+{
+    "isPrivate": true,
+    "languages": [
+      { "size": 45554, "node": { "name": "HTML" } },
+      { "size": 7697, "node": { "name": "JavaScript" } },
+      { "size": 28733, "node": { "name": "CSS" } }
+    ],
+    "url": "https://github.com/Yiroma/TEST2"
+}
+
+###
+DELETE http://localhost:3010/api/repos/763147 HTTP/1.1
+content-type: application/json
