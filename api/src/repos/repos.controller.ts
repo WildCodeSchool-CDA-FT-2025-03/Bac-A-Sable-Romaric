@@ -6,8 +6,14 @@ import { Repos } from "./repos.types";
 const repos = express.Router();
 
 // GET route to recover all repos
-repos.get("/", (_, res: Response) => {
-  res.status(200).json(data);
+repos.get("/", (req: Request, res: Response) => {
+  console.log("Hit all repo controller");
+  console.log(req.query);
+
+  const result = req.query.isPrivate
+    ? data.filter((rep) => rep.isPrivate.toString() === req.query.isPrivate)
+    : data;
+  res.status(200).json(result);
 });
 
 // GET route to recover a repo by id
