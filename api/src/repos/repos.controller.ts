@@ -5,12 +5,14 @@ import { Repos, Fields } from "./repos.types";
 
 const repos = express.Router();
 
+let reposState = data;
+
 // GET route to hit all repos
 repos.get("/", (req: Request, res: Response) => {
   // Filter by isPrivate
   let result = req.query.isPrivate
-    ? data.filter((rep) => rep.isPrivate.toString() === req.query.isPrivate)
-    : data;
+    ? reposState.filter((rep) => rep.isPrivate.toString() === req.query.isPrivate)
+    : reposState;
 
   // Filter by limit
   if (req.query.limit && result.length > +req.query.limit) {
@@ -35,7 +37,7 @@ repos.get("/", (req: Request, res: Response) => {
 
 // GET route to hit a repo by id
 repos.get("/:reposid", (req: Request, res: Response) => {
-  const repo = data.find((rep) => rep.id === req.params.reposid) as Repos;
+  const repo = reposState.find((rep) => rep.id === req.params.reposid) as Repos;
 
   if (repo) {
     res.status(200).json(repo);
@@ -47,8 +49,15 @@ repos.get("/:reposid", (req: Request, res: Response) => {
 // POST route to insert a new repo
 repos.post("/", validateRepo, (req: Request, res: Response) => {
   const newId = Math.ceil(Math.random() * 1000000).toString();
-  data.push({ id: newId, ...req.body });
+  reposState.push({ id: newId, ...req.body });
   res.status(201).json({ message: "Repo created successfully", id: newId });
+});
+
+// DELETE route to delete a repo by id
+repos.delete("/:reposId", (req: Request, res: Response) => {
+  reposState = reposState.filter((repo) => repo.id !== req.params.reposId);
+  console.info("Repo deleted successfully");
+  res.status(204);
 });
 
 export default repos;
