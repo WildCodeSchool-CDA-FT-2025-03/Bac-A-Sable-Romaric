@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import validateRepo from "./repos.validator";
+import { validateRepo, validateRepoUpdate } from "./repos.validator";
 import data from "../../data.json";
 import { Repos, Fields } from "./repos.types";
 
@@ -58,6 +58,27 @@ repos.delete("/:reposId", (req: Request, res: Response) => {
   reposState = reposState.filter((repo) => repo.id !== req.params.reposId);
   console.info("Repo deleted successfully");
   res.status(204);
+});
+
+// PUT route to update a repo by id
+repos.put("/:reposId", validateRepoUpdate, (req: Request, res: Response): void => {
+  const repoIndex = reposState.findIndex((repo) => repo.id === req.params.reposId);
+
+  if (repoIndex === -1) {
+    res.status(404).json({ message: "Repo not found" });
+    return;
+  }
+
+  // Update only the provided fields while keeping existing data
+  reposState[repoIndex] = {
+    ...reposState[repoIndex],
+    ...req.body,
+  };
+
+  res.status(200).json({
+    message: "Repo updated successfully",
+    repo: reposState[repoIndex],
+  });
 });
 
 export default repos;
