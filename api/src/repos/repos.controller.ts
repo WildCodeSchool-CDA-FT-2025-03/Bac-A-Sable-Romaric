@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { validateRepo, validateRepoUpdate } from "./repos.validator";
 import data from "../../data.json";
 import { Repos, Fields } from "./repos.types";
+import logger from "../services/logger";
 
 const repos = express.Router();
 
@@ -42,6 +43,7 @@ repos.get("/:reposid", (req: Request, res: Response) => {
   if (repo) {
     res.status(200).json(repo);
   } else {
+    logger.error({ error: { msg: `Route GET, repo not found, id:${req.params.reposid}` } });
     res.sendStatus(404);
   }
 });
@@ -55,9 +57,14 @@ repos.post("/", validateRepo, (req: Request, res: Response) => {
 
 // DELETE route to delete a repo by id
 repos.delete("/:reposId", (req: Request, res: Response) => {
-  reposState = reposState.filter((repo) => repo.id !== req.params.reposId);
-  console.info("Repo deleted successfully");
-  res.status(204);
+  if (reposState.some((repo) => repo.id === req.params.reposId)) {
+    reposState = reposState.filter((repo) => repo.id !== req.params.reposId);
+    console.info("Repo deleted successfully");
+    res.status(204);
+  } else {
+    logger.error({ error: { msg: `Route DELETE, repo not found, id:${req.params.reposId}` } });
+    res.sendStatus(404);
+  }
 });
 
 // PUT route to update a repo by id
@@ -65,7 +72,8 @@ repos.put("/:reposId", validateRepoUpdate, (req: Request, res: Response): void =
   const repoIndex = reposState.findIndex((repo) => repo.id === req.params.reposId);
 
   if (repoIndex === -1) {
-    res.status(404).json({ message: "Repo not found" });
+    logger.error({ error: { msg: `Route PUT, repo not found, id: ${req.params.reposId}` } });
+    res.sendStatus(404);
     return;
   }
 
