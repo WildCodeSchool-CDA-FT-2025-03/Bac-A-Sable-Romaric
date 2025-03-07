@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
+import logger from "../services/logger";
 
 // Schema to validate the data of the repo for creation
 const schema = Joi.object({
@@ -33,7 +34,8 @@ const updateSchema = Joi.object({
 const validateRepo = (req: Request, res: Response, next: NextFunction) => {
   const { error } = schema.validate(req.body);
   if (error) {
-    res.status(422).json({ errorMessage: error.message });
+    logger.error({ error: { msg: `Validation repo, ${error.details[0].message}` } });
+    res.status(422).json(error);
   } else {
     next();
   }
@@ -43,7 +45,8 @@ const validateRepo = (req: Request, res: Response, next: NextFunction) => {
 const validateRepoUpdate = (req: Request, res: Response, next: NextFunction) => {
   const { error } = updateSchema.validate(req.body);
   if (error) {
-    res.status(422).json({ errorMessage: error.message });
+    logger.error({ error: { msg: `Validation repo update, ${error.details[0].message}` } });
+    res.status(422).json(error);
   } else {
     next();
   }
