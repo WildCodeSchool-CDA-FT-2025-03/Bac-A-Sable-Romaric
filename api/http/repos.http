@@ -16,15 +16,15 @@ content-type: application/json
       { "size": 7697, "node": { "name": "JavaScript" } },
       { "size": 28733, "node": { "name": "CSS" } }
     ],
-    "url": "https://github.com/Yiroma/test_du_PUT"
+    "url": "https://github.com/Yiroma/test_POST"
 }
 
 ###
-DELETE http://localhost:3000/api/repos/620618 HTTP/1.1
+DELETE http://localhost:3000/api/repos/620610
 content-type: application/json
 
 ###
-PUT http://localhost:3000/api/repos/620618 HTTP/1.1
+PUT http://localhost:3000/api/repos/992521 HTTP/1.1
 content-type: application/json
 
 {
