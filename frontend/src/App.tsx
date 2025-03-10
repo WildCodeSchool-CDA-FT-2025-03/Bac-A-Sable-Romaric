@@ -1,4 +1,5 @@
 import useRepos from "./services/useRepos";
+import RepoCard from "./components/RepoCard";
 
 import "./App.css";
 
@@ -7,9 +8,12 @@ function App() {
 
   return (
     <>
-      <h1>Bac-a-sable-Romaric</h1>
-      {data.length > 0 && <h2>{data[0].url}</h2>}
-      {data.length > 0 && <h2>{data[0].languages[0].node.name}</h2>}
+      <h1>Bac à sable de Romaric</h1>
+      {data.map((repo, index) => (
+        <RepoCard repo={repo} cls={index % 2 === 0 ? "red" : "blue"}>
+          <span>Children Element</span>
+        </RepoCard>
+      ))}
     </>
   );
 }
