@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd api && npm run dev\"",
+    "install": "concurrently \"cd frontend && npm install\" \"cd api && npm install\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/WildCodeSchool-CDA-FT-2025-03/Bac-A-Sable-Romaric#readme",
   "dependencies": {
     "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
