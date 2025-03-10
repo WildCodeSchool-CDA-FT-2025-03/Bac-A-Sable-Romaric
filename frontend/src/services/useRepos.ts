@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "./api";
 
-import type { Repos } from "../types/repoas.type";
+import type { Repos } from "../types/repos.type";
 
 const useRepos = () => {
   const [data, setData] = useState<Repos[]>([]);
