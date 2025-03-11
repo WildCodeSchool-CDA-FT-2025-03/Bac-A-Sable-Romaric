@@ -1,5 +1,26 @@
 [
   {
+    "description": "",
+    "id": "R_kgDOOEH4Pw",
+    "isPrivate": false,
+    "languages": [],
+    "name": "magicfinder",
+    "url": "https://github.com/Yiroma/magicfinder"
+  },
+  {
+    "description": "",
+    "id": "R_kgDOLYD4JQ",
+    "isPrivate": true,
+    "languages": [
+      { "size": 76459, "node": { "name": "HTML" } },
+      { "size": 4117, "node": { "name": "JavaScript" } },
+      { "size": 28733, "node": { "name": "CSS" } }
+    ],
+    "name": "LoireValleyServices",
+    "url": "https://github.com/Yiroma/LoireValleyServices"
+  },
+  {
+    "description": "",
     "id": "R_kgDON-s2OA",
     "isPrivate": false,
     "languages": [
@@ -7,28 +28,22 @@
       { "size": 528, "node": { "name": "JavaScript" } },
       { "size": 345, "node": { "name": "CSS" } }
     ],
+    "name": "nutriview",
     "url": "https://github.com/Yiroma/nutriview"
   },
   {
-    "id": "R_kgDOLYD4JQ",
-    "isPrivate": true,
-    "languages": [
-      { "size": 45554, "node": { "name": "HTML" } },
-      { "size": 7697, "node": { "name": "JavaScript" } },
-      { "size": 28733, "node": { "name": "CSS" } }
-    ],
-    "url": "https://github.com/Yiroma/LoireValleyServices"
-  },
-  {
+    "description": "",
     "id": "R_kgDONXw1iQ",
     "isPrivate": false,
     "languages": [
       { "size": 384873, "node": { "name": "HTML" } },
       { "size": 80, "node": { "name": "JavaScript" } }
     ],
+    "name": "yiromaric-portfolio-2024-nextjs-static-website",
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs-static-website"
   },
   {
+    "description": "Yiromaric's portfolio 2024 - next.js",
     "id": "R_kgDOMvoCAA",
     "isPrivate": false,
     "languages": [
@@ -36,27 +51,33 @@
       { "size": 59, "node": { "name": "CSS" } },
       { "size": 384873, "node": { "name": "HTML" } }
     ],
+    "name": "yiromaric-portfolio-2024-nextjs",
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs"
   },
   {
+    "description": "New yiromaric's portfolio 2024 in Next.js",
     "id": "R_kgDOMvlTjg",
     "isPrivate": true,
     "languages": [
       { "size": 1920, "node": { "name": "JavaScript" } },
       { "size": 59, "node": { "name": "CSS" } }
     ],
+    "name": "template-nextjs",
     "url": "https://github.com/Yiroma/template-nextjs"
   },
   {
+    "description": "",
     "id": "R_kgDOMsFTrw",
     "isPrivate": false,
     "languages": [
       { "size": 325449, "node": { "name": "JavaScript" } },
       { "size": 58, "node": { "name": "CSS" } }
     ],
+    "name": "yiroma-website-nextjs",
     "url": "https://github.com/Yiroma/yiroma-website-nextjs"
   },
   {
+    "description": "",
     "id": "R_kgDOJqv5EA",
     "isPrivate": false,
     "languages": [
@@ -64,9 +85,11 @@
       { "size": 3491, "node": { "name": "JavaScript" } },
       { "size": 13627, "node": { "name": "CSS" } }
     ],
+    "name": "Portfolio",
     "url": "https://github.com/Yiroma/Portfolio"
   },
   {
+    "description": "",
     "id": "R_kgDOMEUiXA",
     "isPrivate": false,
     "languages": [
@@ -74,9 +97,11 @@
       { "size": 6787, "node": { "name": "TypeScript" } },
       { "size": 227, "node": { "name": "JavaScript" } }
     ],
+    "name": "next-training-app",
     "url": "https://github.com/Yiroma/next-training-app"
   },
   {
+    "description": "Web mini-game",
     "id": "R_kgDOLo8k4A",
     "isPrivate": false,
     "languages": [
@@ -84,15 +109,19 @@
       { "size": 1514, "node": { "name": "JavaScript" } },
       { "size": 591, "node": { "name": "CSS" } }
     ],
+    "name": "tryToClickMe",
     "url": "https://github.com/Yiroma/tryToClickMe"
   },
   {
+    "description": "Yiroma's Skills & Projects",
     "id": "R_kgDOJ_-nPQ",
     "isPrivate": false,
     "languages": [],
+    "name": "Yiroma",
     "url": "https://github.com/Yiroma/Yiroma"
   },
   {
+    "description": "",
     "id": "R_kgDOK-KV0w",
     "isPrivate": false,
     "languages": [
@@ -100,9 +129,11 @@
       { "size": 4063, "node": { "name": "HTML" } },
       { "size": 6956, "node": { "name": "CSS" } }
     ],
+    "name": "WCS-Training",
     "url": "https://github.com/Yiroma/WCS-Training"
   },
   {
+    "description": "",
     "id": "R_kgDOKg-utA",
     "isPrivate": false,
     "languages": [
@@ -110,9 +141,11 @@
       { "size": 759, "node": { "name": "HTML" } },
       { "size": 27727, "node": { "name": "SCSS" } }
     ],
+    "name": "Blog-DevMX",
     "url": "https://github.com/Yiroma/Blog-DevMX"
   },
   {
+    "description": "",
     "id": "R_kgDOKUAPyg",
     "isPrivate": false,
     "languages": [
@@ -120,9 +153,11 @@
       { "size": 396, "node": { "name": "HTML" } },
       { "size": 59, "node": { "name": "CSS" } }
     ],
+    "name": "Minimal-fullStack-js-template",
     "url": "https://github.com/Yiroma/Minimal-fullStack-js-template"
   },
   {
+    "description": "",
     "id": "R_kgDOKZhEQg",
     "isPrivate": false,
     "languages": [
@@ -130,33 +165,41 @@
       { "size": 1413, "node": { "name": "HTML" } },
       { "size": 3580, "node": { "name": "SCSS" } }
     ],
+    "name": "Glassmorphism-Card-Hover-Effects",
     "url": "https://github.com/Yiroma/Glassmorphism-Card-Hover-Effects"
   },
   {
+    "description": "",
     "id": "R_kgDOKSd6Ag",
     "isPrivate": false,
     "languages": [],
+    "name": "homers-odyssey",
     "url": "https://github.com/Yiroma/homers-odyssey"
   },
   {
+    "description": "Challenge FrontEnd Mentor",
     "id": "R_kgDOKPVWAQ",
     "isPrivate": false,
     "languages": [
       { "size": 1388, "node": { "name": "HTML" } },
       { "size": 2598, "node": { "name": "CSS" } }
     ],
+    "name": "profile-card-component-FrontendMENTOR",
     "url": "https://github.com/Yiroma/profile-card-component-FrontendMENTOR"
   },
   {
+    "description": "differents ideas css",
     "id": "R_kgDOKNdsLQ",
     "isPrivate": false,
     "languages": [
       { "size": 679, "node": { "name": "HTML" } },
       { "size": 1543, "node": { "name": "CSS" } }
     ],
+    "name": "CSS-tricks",
     "url": "https://github.com/Yiroma/CSS-tricks"
   },
   {
+    "description": "",
     "id": "R_kgDOJz8uHg",
     "isPrivate": false,
     "languages": [
@@ -166,9 +209,11 @@
       { "size": 385, "node": { "name": "HTML" } },
       { "size": 5620, "node": { "name": "SCSS" } }
     ],
+    "name": "Check_4_ToDoList",
     "url": "https://github.com/Yiroma/Check_4_ToDoList"
   },
   {
+    "description": "",
     "id": "R_kgDOKLVamA",
     "isPrivate": false,
     "languages": [
@@ -179,9 +224,11 @@
       { "size": 35, "node": { "name": "SCSS" } },
       { "size": 2397, "node": { "name": "Twig" } }
     ],
+    "name": "2023-03-remote-fr-php-symfony-api-plateform",
     "url": "https://github.com/Yiroma/2023-03-remote-fr-php-symfony-api-plateform"
   },
   {
+    "description": "",
     "id": "R_kgDOJ7itIQ",
     "isPrivate": false,
     "languages": [
@@ -191,9 +238,11 @@
       { "size": 364, "node": { "name": "HTML" } },
       { "size": 818, "node": { "name": "Dockerfile" } }
     ],
+    "name": "Template_FullStack_JS_React",
     "url": "https://github.com/Yiroma/Template_FullStack_JS_React"
   },
   {
+    "description": "",
     "id": "R_kgDOKLVL9w",
     "isPrivate": false,
     "languages": [
@@ -203,9 +252,11 @@
       { "size": 364, "node": { "name": "HTML" } },
       { "size": 818, "node": { "name": "Dockerfile" } }
     ],
+    "name": "WCS_PRISMA",
     "url": "https://github.com/Yiroma/WCS_PRISMA"
   },
   {
+    "description": "hackathon repo",
     "id": "R_kgDOJ6C4gw",
     "isPrivate": false,
     "languages": [
@@ -215,9 +266,11 @@
       { "size": 818, "node": { "name": "Dockerfile" } },
       { "size": 39498, "node": { "name": "SCSS" } }
     ],
+    "name": "Hackathon2-cHackahuete",
     "url": "https://github.com/Yiroma/Hackathon2-cHackahuete"
   },
   {
+    "description": "",
     "id": "R_kgDOJkHFMw",
     "isPrivate": false,
     "languages": [
@@ -227,9 +280,11 @@
       { "size": 796, "node": { "name": "HTML" } },
       { "size": 21448, "node": { "name": "CSS" } }
     ],
+    "name": "NutriDrive",
     "url": "https://github.com/Yiroma/NutriDrive"
   },
   {
+    "description": "",
     "id": "R_kgDOJcHhQw",
     "isPrivate": false,
     "languages": [
@@ -239,9 +294,11 @@
       { "size": 364, "node": { "name": "HTML" } },
       { "size": 976, "node": { "name": "CSS" } }
     ],
+    "name": "js-template-fullstack",
     "url": "https://github.com/Yiroma/js-template-fullstack"
   },
   {
+    "description": "Project_01_Todolist_HTML_CSS_JS_Vanilla",
     "id": "R_kgDOJSUXDw",
     "isPrivate": false,
     "languages": [
@@ -249,6 +306,7 @@
       { "size": 8605, "node": { "name": "JavaScript" } },
       { "size": 8497, "node": { "name": "CSS" } }
     ],
+    "name": "TODOWILD_Yiroma",
     "url": "https://github.com/Yiroma/TODOWILD_Yiroma"
   }
 ]
