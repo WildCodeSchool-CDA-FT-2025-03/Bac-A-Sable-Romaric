@@ -5,13 +5,12 @@ import { Repos } from "../types/repos.type";
 type Props = {
   repo: Repos;
   children: JSX.Element;
-  cls: string;
 };
 
-function RepoCard({ repo, children, cls }: Props) {
+function RepoCard({ repo, children }: Props) {
   return (
     <>
-      <h2 className={cls}>
+      <h2>
         <Link to={`/repo/${repo.id}`}>{repo.url}</Link>
       </h2>
       {children}

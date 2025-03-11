@@ -1,11 +1,9 @@
 import { Outlet } from "react-router-dom";
 
-import "./App.css";
-
 function App() {
   return (
     <>
-      <header>header</header>
+      <header className="bg-red-500 p-4 text-white font-bold text-xl">header</header>
       <Outlet />
       <footer>footer</footer>
     </>
