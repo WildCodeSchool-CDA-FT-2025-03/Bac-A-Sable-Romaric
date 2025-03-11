@@ -1,4 +1,5 @@
 import { JSX } from "react";
+import { Link } from "react-router-dom";
 import { Repos } from "../types/repos.type";
 
 type Props = {
@@ -10,7 +11,9 @@ type Props = {
 function RepoCard({ repo, children, cls }: Props) {
   return (
     <>
-      <h2 className={cls}>{repo.url}</h2>
+      <h2 className={cls}>
+        <Link to={`/repo/${repo.id}`}>{repo.url}</Link>
+      </h2>
       {children}
     </>
   );

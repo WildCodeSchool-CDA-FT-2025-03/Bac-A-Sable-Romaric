@@ -5,8 +5,9 @@ import type { Repos } from "../types/repos.type";
 
 const useRepos = () => {
   const [data, setData] = useState<Repos[]>([]);
+  const [oneRepo, setOneRepo] = useState<Repos>();
 
-  useEffect(() => {
+  const getAllRepos = () => {
     api
       .get("/repos")
       .then((repos) => {
@@ -15,9 +16,24 @@ const useRepos = () => {
       .catch((err) => {
         console.error(err);
       });
+  };
+
+  const getOneRepo = (repoId: string) => {
+    api
+      .get(`/repos/${repoId}`)
+      .then((repo) => {
+        setOneRepo(repo.data as Repos);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  useEffect(() => {
+    getAllRepos();
   }, []);
 
-  return { data };
+  return { data, oneRepo, getOneRepo };
 };
 
 export default useRepos;
