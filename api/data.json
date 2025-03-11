@@ -1,6 +1,6 @@
 [
   {
-    "description": "",
+    "description": "Find and register your cards",
     "id": "R_kgDOOEH4Pw",
     "isPrivate": false,
     "languages": [],
@@ -8,7 +8,7 @@
     "url": "https://github.com/Yiroma/magicfinder"
   },
   {
-    "description": "",
+    "description": "Landing page for my client Taxi Loire Valley Services",
     "id": "R_kgDOLYD4JQ",
     "isPrivate": true,
     "languages": [
@@ -20,7 +20,7 @@
     "url": "https://github.com/Yiroma/LoireValleyServices"
   },
   {
-    "description": "",
+    "description": "nutriments calculator's application",
     "id": "R_kgDON-s2OA",
     "isPrivate": false,
     "languages": [
@@ -32,7 +32,7 @@
     "url": "https://github.com/Yiroma/nutriview"
   },
   {
-    "description": "",
+    "description": "Next.js static website for my portfolio",
     "id": "R_kgDONXw1iQ",
     "isPrivate": false,
     "languages": [
@@ -43,7 +43,7 @@
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs-static-website"
   },
   {
-    "description": "Yiromaric's portfolio 2024 - next.js",
+    "description": "Portfolio 2024 created with Next.js",
     "id": "R_kgDOMvoCAA",
     "isPrivate": false,
     "languages": [
@@ -55,7 +55,7 @@
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs"
   },
   {
-    "description": "New yiromaric's portfolio 2024 in Next.js",
+    "description": "creation of a Next.js template",
     "id": "R_kgDOMvlTjg",
     "isPrivate": true,
     "languages": [
@@ -66,7 +66,7 @@
     "url": "https://github.com/Yiroma/template-nextjs"
   },
   {
-    "description": "",
+    "description": "Next.js website tutorial",
     "id": "R_kgDOMsFTrw",
     "isPrivate": false,
     "languages": [
@@ -77,7 +77,7 @@
     "url": "https://github.com/Yiroma/yiroma-website-nextjs"
   },
   {
-    "description": "",
+    "description": "Vanilla portfolio",
     "id": "R_kgDOJqv5EA",
     "isPrivate": false,
     "languages": [
@@ -89,7 +89,7 @@
     "url": "https://github.com/Yiroma/Portfolio"
   },
   {
-    "description": "",
+    "description": "training tutorial with Next.js",
     "id": "R_kgDOMEUiXA",
     "isPrivate": false,
     "languages": [
@@ -101,7 +101,7 @@
     "url": "https://github.com/Yiroma/next-training-app"
   },
   {
-    "description": "Web mini-game",
+    "description": "A vanilla mini-game training",
     "id": "R_kgDOLo8k4A",
     "isPrivate": false,
     "languages": [
@@ -113,7 +113,7 @@
     "url": "https://github.com/Yiroma/tryToClickMe"
   },
   {
-    "description": "Yiroma's Skills & Projects",
+    "description": "Yiroma's Skills",
     "id": "R_kgDOJ_-nPQ",
     "isPrivate": false,
     "languages": [],
@@ -121,7 +121,7 @@
     "url": "https://github.com/Yiroma/Yiroma"
   },
   {
-    "description": "",
+    "description": "Various javascript & react exercises",
     "id": "R_kgDOK-KV0w",
     "isPrivate": false,
     "languages": [
@@ -133,7 +133,7 @@
     "url": "https://github.com/Yiroma/WCS-Training"
   },
   {
-    "description": "",
+    "description": "Full-stack project for my web developer certification",
     "id": "R_kgDOKg-utA",
     "isPrivate": false,
     "languages": [
@@ -145,7 +145,7 @@
     "url": "https://github.com/Yiroma/Blog-DevMX"
   },
   {
-    "description": "",
+    "description": "Minimal template fullstack project",
     "id": "R_kgDOKUAPyg",
     "isPrivate": false,
     "languages": [
@@ -157,7 +157,7 @@
     "url": "https://github.com/Yiroma/Minimal-fullStack-js-template"
   },
   {
-    "description": "",
+    "description": "Training to glassmorphism effect",
     "id": "R_kgDOKZhEQg",
     "isPrivate": false,
     "languages": [
@@ -169,7 +169,7 @@
     "url": "https://github.com/Yiroma/Glassmorphism-Card-Hover-Effects"
   },
   {
-    "description": "",
+    "description": "Wild Code School quest : homer's odyssey",
     "id": "R_kgDOKSd6Ag",
     "isPrivate": false,
     "languages": [],
@@ -177,7 +177,7 @@
     "url": "https://github.com/Yiroma/homers-odyssey"
   },
   {
-    "description": "Challenge FrontEnd Mentor",
+    "description": "FrontEnd Mentor challenge - create a profile card",
     "id": "R_kgDOKPVWAQ",
     "isPrivate": false,
     "languages": [
@@ -188,7 +188,7 @@
     "url": "https://github.com/Yiroma/profile-card-component-FrontendMENTOR"
   },
   {
-    "description": "differents ideas css",
+    "description": "Ideas CSS",
     "id": "R_kgDOKNdsLQ",
     "isPrivate": false,
     "languages": [
@@ -199,7 +199,7 @@
     "url": "https://github.com/Yiroma/CSS-tricks"
   },
   {
-    "description": "",
+    "description": "Wild Code School Checkpoint 4 - create a solo fullstack project",
     "id": "R_kgDOJz8uHg",
     "isPrivate": false,
     "languages": [
@@ -213,22 +213,7 @@
     "url": "https://github.com/Yiroma/Check_4_ToDoList"
   },
   {
-    "description": "",
-    "id": "R_kgDOKLVamA",
-    "isPrivate": false,
-    "languages": [
-      { "size": 682, "node": { "name": "Shell" } },
-      { "size": 3706, "node": { "name": "JavaScript" } },
-      { "size": 16315, "node": { "name": "PHP" } },
-      { "size": 1808, "node": { "name": "Dockerfile" } },
-      { "size": 35, "node": { "name": "SCSS" } },
-      { "size": 2397, "node": { "name": "Twig" } }
-    ],
-    "name": "2023-03-remote-fr-php-symfony-api-plateform",
-    "url": "https://github.com/Yiroma/2023-03-remote-fr-php-symfony-api-plateform"
-  },
-  {
-    "description": "",
+    "description": "Original Wild Code School template fullstack js react",
     "id": "R_kgDOJ7itIQ",
     "isPrivate": false,
     "languages": [
@@ -242,7 +227,7 @@
     "url": "https://github.com/Yiroma/Template_FullStack_JS_React"
   },
   {
-    "description": "",
+    "description": "Wild Code School - Prisma live DEMO",
     "id": "R_kgDOKLVL9w",
     "isPrivate": false,
     "languages": [
@@ -256,7 +241,7 @@
     "url": "https://github.com/Yiroma/WCS_PRISMA"
   },
   {
-    "description": "hackathon repo",
+    "description": "Wild Code School - Hackathon 2 - smartphone evaluator for Emmaüs Connect",
     "id": "R_kgDOJ6C4gw",
     "isPrivate": false,
     "languages": [
@@ -270,7 +255,7 @@
     "url": "https://github.com/Yiroma/Hackathon2-cHackahuete"
   },
   {
-    "description": "",
+    "description": "Wild Code School - Project 2 - first React application",
     "id": "R_kgDOJkHFMw",
     "isPrivate": false,
     "languages": [
@@ -284,7 +269,7 @@
     "url": "https://github.com/Yiroma/NutriDrive"
   },
   {
-    "description": "",
+    "description": "Another template js fullstack",
     "id": "R_kgDOJcHhQw",
     "isPrivate": false,
     "languages": [
@@ -298,7 +283,7 @@
     "url": "https://github.com/Yiroma/js-template-fullstack"
   },
   {
-    "description": "Project_01_Todolist_HTML_CSS_JS_Vanilla",
+    "description": "Wild Code School - Project1 - First single page website vanilla js",
     "id": "R_kgDOJSUXDw",
     "isPrivate": false,
     "languages": [
