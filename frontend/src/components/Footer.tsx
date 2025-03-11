@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from "./Icons";
 function Footer() {
   return (
     <>
-      <footer className="w-full min-h-16 p-4 flex items-center justify-center text-white bg-gradient-to-t from-slate-900 to-stone-950">
+      <footer className="w-full h-32 p-4 flex items-center justify-center text-white bg-gradient-to-t from-slate-900 to-stone-950">
         <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-2">
           <p className="text-center text-sm">Bac à sable - GitHub Repositories</p>
           <span className="text-sm">{new Date().getFullYear()} Yiroma</span>
