@@ -9,7 +9,9 @@ function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    getAllRepos(searchParams.get("limit") || "10");
+    const limit = searchParams.get("limit") || "10";
+    getAllRepos(limit);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   return (
