@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { GithubIcon } from "../components/Icons";
 
 import RepoCard from "../components/RepoCard";
 import useRepos from "../services/useRepos";
@@ -16,11 +17,12 @@ function Home() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold">Repositories</h1>
-      <label className="flex gap-2 items-center">
+      <GithubIcon className="w-32 h-32" />
+      <h1 className="text-2xl font-bold">GitHub Repositories</h1>
+      <label className="flex gap-4 items-center">
         Nombre de repos affichés
         <select
-          className="bg-stone-800 text-white rounded-md border border-stone-700 p-2"
+          className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
           name="limit"
           value={searchParams.get("limit") || "10"}
           onChange={(e) => setSearchParams({ limit: e.target.value })}
