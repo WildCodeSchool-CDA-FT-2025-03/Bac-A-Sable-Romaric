@@ -1,19 +1,13 @@
-import useRepos from "./services/useRepos";
-import RepoCard from "./components/RepoCard";
+import { Outlet } from "react-router-dom";
 
 import "./App.css";
 
 function App() {
-  const { data } = useRepos();
-
   return (
     <>
-      <h1>Bac à sable de Romaric</h1>
-      {data.map((repo, index) => (
-        <RepoCard repo={repo} cls={index % 2 === 0 ? "red" : "blue"}>
-          <span>Children Element</span>
-        </RepoCard>
-      ))}
+      <header>header</header>
+      <Outlet />
+      <footer>footer</footer>
     </>
   );
 }
