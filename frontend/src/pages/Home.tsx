@@ -8,7 +8,7 @@ function Home() {
     <>
       <h1>Bac à sable de Romaric</h1>
       {data.map((repo, index) => (
-        <RepoCard repo={repo} cls={index % 2 === 0 ? "red" : "blue"}>
+        <RepoCard repo={repo}>
           <span>Children Element</span>
         </RepoCard>
       ))}
