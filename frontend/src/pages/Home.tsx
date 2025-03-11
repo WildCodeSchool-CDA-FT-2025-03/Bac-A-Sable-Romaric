@@ -8,9 +8,7 @@ function Home() {
     <>
       <h1>Bac à sable de Romaric</h1>
       {data.map((repo, index) => (
-        <RepoCard repo={repo}>
-          <span>Children Element</span>
-        </RepoCard>
+        <RepoCard repo={repo} key={index} />
       ))}
     </>
   );

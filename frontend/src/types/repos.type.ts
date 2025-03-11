@@ -1,8 +1,11 @@
 import type { Languages } from "./languages.type";
 
 export type Repos = {
+  description: string;
   id: string;
   isPrivate: boolean;
-  url: string;
   languages: Languages[];
+  name: string;
+  url: string;
+  [key: string]: any;
 };

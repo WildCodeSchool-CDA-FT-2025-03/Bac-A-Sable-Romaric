@@ -9,11 +9,15 @@ function RepoPage() {
 
   useEffect(() => {
     getOneRepo(repoId as string);
-  }, [repoId, getOneRepo]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [repoId]);
 
   return (
     <>
-      <h1>Page du repo {repoId}</h1>
+      <h1>Page du repo {oneRepo?.name}</h1>
+      <p>{oneRepo?.description}</p>
+      <p>{oneRepo?.url}</p>
+      <p>{oneRepo?.isPrivate ? "Private" : "Public"}</p>
       {oneRepo && oneRepo.languages.map((lang) => <h4>{lang.node.name}</h4>)}
     </>
   );
