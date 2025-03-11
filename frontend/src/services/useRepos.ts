@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import api from "./api";
 
 import type { Repos } from "../types/repos.type";
@@ -6,10 +6,11 @@ import type { Repos } from "../types/repos.type";
 const useRepos = () => {
   const [data, setData] = useState<Repos[]>([]);
   const [oneRepo, setOneRepo] = useState<Repos>();
+  const [error, setError] = useState(false);
 
-  const getAllRepos = () => {
+  const getAllRepos = (limit: string) => {
     api
-      .get("/repos")
+      .get(`/repos?limit=${limit}`)
       .then((repos) => {
         setData(repos.data as Repos[]);
       })
@@ -25,15 +26,12 @@ const useRepos = () => {
         setOneRepo(repo.data as Repos);
       })
       .catch((err) => {
+        setError(true);
         console.error(err);
       });
   };
 
-  useEffect(() => {
-    getAllRepos();
-  }, []);
-
-  return { data, oneRepo, getOneRepo };
+  return { data, oneRepo, getOneRepo, getAllRepos, error };
 };
 
 export default useRepos;

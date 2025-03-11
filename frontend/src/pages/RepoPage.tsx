@@ -1,16 +1,20 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import useRepos from "../services/useRepos";
 
 function RepoPage() {
   const { repoId } = useParams();
 
-  const { oneRepo, getOneRepo } = useRepos();
+  const { oneRepo, getOneRepo, error } = useRepos();
 
   useEffect(() => {
     getOneRepo(repoId as string);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [repoId]);
+
+  if (error) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <>
