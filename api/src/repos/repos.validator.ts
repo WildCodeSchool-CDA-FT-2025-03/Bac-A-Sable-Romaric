@@ -4,7 +4,7 @@ import logger from "../services/logger";
 
 // Schema to validate the data of the repo for creation
 const schema = Joi.object({
-  url: Joi.string().required(),
+  description: Joi.string().required(),
   isPrivate: Joi.boolean().required(),
   languages: Joi.array().items(
     Joi.object({
@@ -14,11 +14,13 @@ const schema = Joi.object({
       }),
     })
   ),
+  name: Joi.string().required(),
+  url: Joi.string().required(),
 });
 
 // Schema for partial updates - all fields are optional
 const updateSchema = Joi.object({
-  url: Joi.string(),
+  description: Joi.string(),
   isPrivate: Joi.boolean(),
   languages: Joi.array().items(
     Joi.object({
@@ -28,6 +30,8 @@ const updateSchema = Joi.object({
       }),
     })
   ),
+  name: Joi.string(),
+  url: Joi.string(),
 });
 
 // Middleware to validate the data of the repo for creation
