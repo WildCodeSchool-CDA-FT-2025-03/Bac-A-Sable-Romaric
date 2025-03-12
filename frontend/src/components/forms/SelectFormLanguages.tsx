@@ -13,12 +13,6 @@ function SelectFormLanguages({ langs = [], onChange }: SelectFormLanguagesProps)
     getAllLanguages();
   }, [getAllLanguages]);
 
-  useEffect(() => {
-    if (langs.length === 0 && languages.length > 0) {
-      onChange([languages[0]]);
-    }
-  }, [languages, langs, onChange]);
-
   const handleSelectChange = (index: number, lang: string) => {
     const newLangs = [...langs];
     newLangs[index] = lang;
@@ -26,7 +20,7 @@ function SelectFormLanguages({ langs = [], onChange }: SelectFormLanguagesProps)
   };
 
   const addLanguage = () => {
-    onChange([...langs, languages[0] || ""]);
+    onChange([...langs, ""]);
   };
 
   const removeLanguage = (index: number) => {
@@ -45,6 +39,7 @@ function SelectFormLanguages({ langs = [], onChange }: SelectFormLanguagesProps)
             value={lang}
             onChange={(e) => handleSelectChange(index, e.target.value)}
           >
+            <option value="">Choisir le langage</option>
             {languages.map((language) => (
               <option key={language} value={language}>
                 {language}

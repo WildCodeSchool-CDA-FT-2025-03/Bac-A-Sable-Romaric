@@ -1,5 +1,3 @@
-import React from "react";
-
 type InputFormProps = {
   id: string;
   name: string;
@@ -23,6 +21,7 @@ function InputForm({ name, onChange, placeholder, value, title }: InputFormProps
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required
       />
     </>
   );
