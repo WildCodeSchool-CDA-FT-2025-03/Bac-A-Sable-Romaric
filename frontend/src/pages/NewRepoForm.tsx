@@ -59,13 +59,6 @@ function NewRepoForm() {
     <>
       <h1 className="text-2xl font-bold">Ajouter un nouveau repo</h1>
 
-      <Link
-        to="/"
-        className="bg-gradient-to-b from-slate-900 to-stone-950 text-white rounded-md border border-stone-700 px-2 py-1 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.2)]"
-      >
-        {`<< Retour à l'accueil`}
-      </Link>
-
       <form className="container mx-auto px-4 flex flex-col gap-4" onSubmit={handleSubmitRepo}>
         <InputForm
           title="Nom du repo"
@@ -101,12 +94,21 @@ function NewRepoForm() {
 
         <CheckboxForm isPrivate={newRepo.isPrivate} onChange={handleIsPrivateChange} />
 
-        <button
-          type="submit"
-          className="bg-gradient-to-b from-slate-900 to-stone-950 text-white rounded-md border border-stone-700 px-2 py-4 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.2)]"
-        >
-          Ajouter le repo
-        </button>
+        <div className="flex justify-between items-stretch gap-4 mt-8">
+          <Link
+            to="/"
+            className="w-1/2 py-6 text-center bg-gradient-to-b from-slate-900 to-stone-950 text-white rounded-md border border-slate-700 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.2)]"
+          >
+            {`<< Retour à l'accueil`}
+          </Link>
+
+          <button
+            type="submit"
+            className="w-1/2 py-6 font-bold bg-blue-900 hover:bg-blue-600 text-white rounded-md border border-blue-600 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.2)]"
+          >
+            Ajouter le repo
+          </button>
+        </div>
       </form>
     </>
   );
