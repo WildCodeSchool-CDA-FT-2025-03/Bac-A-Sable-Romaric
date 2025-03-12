@@ -1,6 +1,9 @@
 import { useState } from "react";
-import type { Repos } from "../types/repos.type";
 import { Link } from "react-router-dom";
+
+import type { Repos } from "../types/repos.type";
+
+import InputForm from "../components/forms/InputForm";
 
 const initialRepo = {
   description: "",
@@ -30,12 +33,8 @@ function NewRepoForm() {
       </Link>
 
       <form className="container mx-auto px-4 flex flex-col gap-4">
-        <label className="sr-only" htmlFor="name">
-          Nom du repo
-        </label>
-        <input
-          className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
-          type="text"
+        <InputForm
+          title="Nom du repo"
           name="name"
           id="name"
           placeholder="Nom du repo"
@@ -43,12 +42,8 @@ function NewRepoForm() {
           onChange={handleNewRepo}
         />
 
-        <label className="sr-only" htmlFor="description">
-          Description
-        </label>
-        <input
-          className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
-          type="text"
+        <InputForm
+          title="Description du repo"
           name="description"
           id="description"
           placeholder="Description du repo"
