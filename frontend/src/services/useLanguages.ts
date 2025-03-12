@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import api from "./api";
 
 const useLanguages = () => {
   const [languages, setLanguages] = useState<string[]>([]);
 
-  const getAllLanguages = () => {
+  const getAllLanguages = useCallback(() => {
     api
       .get(`/languages`)
       .then((languages) => {
@@ -13,7 +13,7 @@ const useLanguages = () => {
       .catch((err) => {
         console.error(err);
       });
-  };
+  }, []);
 
   return { languages, getAllLanguages };
 };
