@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import api from "./api";
 
 import type { Repos } from "../types/repos.type";
@@ -8,7 +8,7 @@ const useRepos = () => {
   const [oneRepo, setOneRepo] = useState<Repos>();
   const [error, setError] = useState(false);
 
-  const getAllRepos = (limit: string) => {
+  const getAllRepos = useCallback((limit: string) => {
     api
       .get(`/repos?limit=${limit}`)
       .then((repos) => {
@@ -17,7 +17,7 @@ const useRepos = () => {
       .catch((err) => {
         console.error(err);
       });
-  };
+  }, []);
 
   const getOneRepo = (repoId: string) => {
     api
