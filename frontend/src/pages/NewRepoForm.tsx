@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import type { Repos } from "../types/repos.type";
-
 import InputForm from "../components/forms/InputForm";
+
+import useLanguages from "../services/useLanguages";
+
+import type { Repos } from "../types/repos.type";
 
 const initialRepo = {
   description: "",
@@ -15,11 +17,16 @@ const initialRepo = {
 
 function NewRepoForm() {
   const [newRepo, setNewRepo] = useState<Repos>(initialRepo);
+  const { languages, getAllLanguages } = useLanguages();
   console.log(newRepo);
 
   const handleNewRepo = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewRepo(() => ({ ...newRepo, [e.target.name]: e.target.value }));
   };
+
+  useEffect(() => {
+    getAllLanguages();
+  }, [getAllLanguages]);
 
   return (
     <>
@@ -50,6 +57,13 @@ function NewRepoForm() {
           value={newRepo.description}
           onChange={handleNewRepo}
         />
+
+        <label htmlFor="languages">Choix du langages</label>
+        <select name="" id="">
+          {languages.map((lang) => (
+            <option value={lang}>{lang}</option>
+          ))}
+        </select>
       </form>
     </>
   );
