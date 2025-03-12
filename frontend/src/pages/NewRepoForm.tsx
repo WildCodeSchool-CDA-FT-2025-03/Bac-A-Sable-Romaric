@@ -58,8 +58,14 @@ function NewRepoForm() {
           onChange={handleNewRepo}
         />
 
-        <label htmlFor="languages">Choix du langages</label>
-        <select name="" id="">
+        <label className="text-sm" htmlFor="languages">
+          Langage(s) utilisé(s)
+        </label>
+        <select
+          className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
+          name="languages"
+          id="languages"
+        >
           {languages.map((lang) => (
             <option value={lang}>{lang}</option>
           ))}
