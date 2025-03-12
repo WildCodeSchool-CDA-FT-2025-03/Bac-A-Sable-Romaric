@@ -2,9 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import App from "./App.tsx";
 import Home from "./pages/Home.tsx";
 import RepoPage from "./pages/RepoPage.tsx";
-import App from "./App.tsx";
+import NewRepoForm from "./pages/NewRepoForm.tsx";
 
 import "./index.css";
 
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "repo/:repoId",
+        path: "/repos/:repoId",
         element: <RepoPage />,
+      },
+      {
+        path: "/repos/create",
+        element: <NewRepoForm />,
       },
     ],
   },
