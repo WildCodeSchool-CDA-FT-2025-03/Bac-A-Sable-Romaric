@@ -36,6 +36,10 @@ function NewRepoForm() {
     }));
   };
 
+  const handleIsPrivateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNewRepo((prev) => ({ ...prev, isPrivate: e.target.checked }));
+  };
+
   return (
     <>
       <h1 className="text-2xl font-bold">Ajouter un nouveau repo</h1>
@@ -70,6 +74,18 @@ function NewRepoForm() {
           langs={newRepo.languages.map((lang) => lang.node.name)}
           onChange={handleLanguagesChange}
         />
+
+        <label htmlFor="isPrivate" className="text-sm">
+          Le repos est privée :
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="isPrivate"
+            id="isPrivate"
+            checked={newRepo.isPrivate}
+            onChange={handleIsPrivateChange}
+          />
+        </label>
       </form>
     </>
   );
