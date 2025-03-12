@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import InputForm from "../components/forms/InputForm";
-
-import useLanguages from "../services/useLanguages";
+import SelectFormLanguages from "../components/forms/selectFormLanguages";
 
 import type { Repos } from "../types/repos.type";
 
@@ -17,16 +16,30 @@ const initialRepo = {
 
 function NewRepoForm() {
   const [newRepo, setNewRepo] = useState<Repos>(initialRepo);
-  const { languages, getAllLanguages } = useLanguages();
+
   console.log(newRepo);
 
-  const handleNewRepo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNewRepo(() => ({ ...newRepo, [e.target.name]: e.target.value }));
-  };
+  const handleNewRepo = (
+    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    if (e.target.name === "languages") {
+      setNewRepo(() => ({
+        ...newRepo,
+        languages: [
+          {
+            size: 0,
+            node: {
+              name: e.target.value,
+            },
+          },
+        ],
+      }));
+    } else {
+      setNewRepo(() => ({ ...newRepo, [e.target.name]: e.target.value }));
+    }
 
-  useEffect(() => {
-    getAllLanguages();
-  }, [getAllLanguages]);
+    console.log(newRepo);
+  };
 
   return (
     <>
@@ -58,18 +71,7 @@ function NewRepoForm() {
           onChange={handleNewRepo}
         />
 
-        <label className="text-sm" htmlFor="languages">
-          Langage(s) utilisé(s)
-        </label>
-        <select
-          className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
-          name="languages"
-          id="languages"
-        >
-          {languages.map((lang) => (
-            <option value={lang}>{lang}</option>
-          ))}
-        </select>
+        <SelectFormLanguages value={newRepo.languages[0].node.name} onChange={handleNewRepo} />
       </form>
     </>
   );
