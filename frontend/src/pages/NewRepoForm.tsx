@@ -22,23 +22,18 @@ function NewRepoForm() {
   const handleNewRepo = (
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>
   ) => {
-    if (e.target.name === "languages") {
-      setNewRepo(() => ({
-        ...newRepo,
-        languages: [
-          {
-            size: 0,
-            node: {
-              name: e.target.value,
-            },
-          },
-        ],
-      }));
-    } else {
-      setNewRepo(() => ({ ...newRepo, [e.target.name]: e.target.value }));
-    }
+    const { name, value } = e.target;
+    setNewRepo((prev) => ({ ...prev, [name]: value }));
+  };
 
-    console.log(newRepo);
+  const handleLanguagesChange = (selectedLanguages: string[]) => {
+    setNewRepo((prev) => ({
+      ...prev,
+      languages: selectedLanguages.map((lang) => ({
+        size: 0,
+        node: { name: lang },
+      })),
+    }));
   };
 
   return (
@@ -71,7 +66,10 @@ function NewRepoForm() {
           onChange={handleNewRepo}
         />
 
-        <SelectFormLanguages value={newRepo.languages[0].node.name} onChange={handleNewRepo} />
+        <SelectFormLanguages
+          langs={newRepo.languages.map((lang) => lang.node.name)}
+          onChange={handleLanguagesChange}
+        />
       </form>
     </>
   );
