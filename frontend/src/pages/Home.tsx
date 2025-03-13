@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { GithubIcon } from "../components/Icons";
 
-import RepoCard from "../components/RepoCard";
+import HeroBanner from "../components/HeroBanner";
+import LimitFilter from "../components/LimitFilter";
 import Pagination from "../components/Pagination";
+import RepoCard from "../components/RepoCard";
+
 import useRepos from "../services/useRepos";
 
 function Home() {
@@ -17,13 +19,11 @@ function Home() {
     getAllRepos(limit, page);
   }, [searchParams, getAllRepos]);
 
-  // Gestion de la pagination
   const currentPage = parseInt(searchParams.get("page") || "1");
   const limit = parseInt(searchParams.get("limit") || "10");
 
   const handlePageChange = (newPage: number) => {
     setSearchParams({
-      limit: searchParams.get("limit") || "10",
       page: newPage.toString(),
     });
   };
@@ -31,11 +31,7 @@ function Home() {
   return (
     <>
       <div className="container mx-auto px-4 flex flex-col items-center justify-start">
-        <div className="w-screen h-96 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-slate-900 to-stone-950">
-          <GithubIcon className="w-32 h-32" />
-
-          <h1 className="text-3xl font-bold">GitHub Repositories</h1>
-        </div>
+        <HeroBanner />
 
         <div className="w-full mb-12 flex justify-between items-center">
           <Link
@@ -45,24 +41,7 @@ function Home() {
             +
           </Link>
 
-          <label className="flex gap-4 items-center">
-            Nombre de repos affichés
-            <select
-              className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
-              name="limit"
-              value={searchParams.get("limit") || "10"}
-              onChange={(e) =>
-                setSearchParams({
-                  limit: e.target.value,
-                  page: "1",
-                })
-              }
-            >
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-            </select>
-          </label>
+          <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
         </div>
 
         <section className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
@@ -71,7 +50,6 @@ function Home() {
           ))}
         </section>
 
-        {/* Composant de pagination */}
         <Pagination
           currentPage={currentPage}
           limit={limit}
