@@ -9,8 +9,7 @@ function RepoPage() {
 
   useEffect(() => {
     getOneRepo(repoId as string);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [repoId]);
+  }, [repoId, getOneRepo]);
 
   if (error) {
     return <Navigate to="/" replace />;

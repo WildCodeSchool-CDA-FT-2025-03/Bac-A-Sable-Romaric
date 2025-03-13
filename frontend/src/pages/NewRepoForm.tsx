@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import CheckboxForm from "../components/forms/CheckboxForm";
 import InputForm from "../components/forms/InputForm";
-import SelectFormLanguages from "../components/forms/selectFormLanguages";
+import SelectFormLanguages from "../components/forms/SelectFormLanguages";
 
 import useRepos from "../services/useRepos";
 

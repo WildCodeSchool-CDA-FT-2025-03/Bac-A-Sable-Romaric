@@ -15,22 +15,28 @@ repos.get("/", (req: Request, res: Response) => {
     ? reposState.filter((rep) => rep.isPrivate.toString() === req.query.isPrivate)
     : reposState;
 
-  // Filter by limit
-  if (req.query.limit && result.length > +req.query.limit) {
-    result = result.slice(0, +req.query.limit);
-  }
+  // Pagination
+  const page = req.query.page ? parseInt(req.query.page as string) : 1;
+  const limit = req.query.limit ? parseInt(req.query.limit as string) : 10;
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+
+  // Apply pagination
+  const paginatedResult = result.slice(startIndex, endIndex);
 
   // Filter by fields
   if (req.query.fields) {
     const fields = typeof req.query.fields === "string" ? req.query.fields.split(",") : [];
 
     // Map the result to the fields
-    result = result.map((el: Repos) => {
+    result = paginatedResult.map((el: Repos) => {
       // Map return array [res, res, res, res]
       const res = fields.reduce((acc, field) => ({ ...acc, [field]: el[field] }), {}); // Array method return acc (string, number, object, array)
 
       return res; // {fields[0]: ..., fields[1]: ..., fields[2]: ...}
     }) as Repos[];
+  } else {
+    result = paginatedResult;
   }
 
   res.status(200).json(result);
