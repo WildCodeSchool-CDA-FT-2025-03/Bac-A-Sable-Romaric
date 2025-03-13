@@ -3,10 +3,10 @@ import { LinkedinIcon, GithubIcon } from "./Icons";
 
 function Header() {
   return (
-    <header className="w-full min-h-16 p-4 flex items-center justify-center text-white bg-gradient-to-b from-slate-900 to-stone-950">
+    <header className="w-full min-h-16 p-4 flex items-center justify-center text-white bg-slate-900">
       <div className="container mx-auto px-4 flex items-center justify-between gap-2">
         <Link to="/">
-          <h1 className="text-2xl font-bold">Bac à sable de Romaric</h1>
+          <span className="text-xl font-bold">Bac à sable de Romaric</span>
         </Link>
 
         <div className="flex items-center gap-4">

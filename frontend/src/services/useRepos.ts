@@ -8,9 +8,9 @@ const useRepos = () => {
   const [oneRepo, setOneRepo] = useState<Repos>();
   const [error, setError] = useState(false);
 
-  const getAllRepos = useCallback((limit: string) => {
+  const getAllRepos = useCallback((limit: string, page: string = "1") => {
     api
-      .get(`/repos?limit=${limit}`)
+      .get(`/repos?limit=${limit}&page=${page}`)
       .then((repos) => {
         setData(repos.data as Repos[]);
       })
@@ -19,7 +19,7 @@ const useRepos = () => {
       });
   }, []);
 
-  const getOneRepo = (repoId: string) => {
+  const getOneRepo = useCallback((repoId: string) => {
     api
       .get(`/repos/${repoId}`)
       .then((repo) => {
@@ -29,7 +29,7 @@ const useRepos = () => {
         setError(true);
         console.error(err);
       });
-  };
+  }, []);
 
   const addNewRepo = async (repo: Repos) => {
     try {
