@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { GithubIcon } from "../components/Icons";
 
+import HeroBanner from "../components/HeroBanner";
 import RepoCard from "../components/RepoCard";
 import Pagination from "../components/Pagination";
 import useRepos from "../services/useRepos";
@@ -31,11 +31,7 @@ function Home() {
   return (
     <>
       <div className="container mx-auto px-4 flex flex-col items-center justify-start">
-        <div className="w-screen h-96 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-slate-900 to-stone-950">
-          <GithubIcon className="w-32 h-32" />
-
-          <h1 className="text-3xl font-bold">GitHub Repositories</h1>
-        </div>
+        <HeroBanner />
 
         <div className="w-full mb-12 flex justify-between items-center">
           <Link
