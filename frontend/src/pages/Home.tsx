@@ -25,21 +25,21 @@ function Home() {
   useEffect(() => {
     let filtered = [...data];
 
-    // Filtre par nom
+    // filter by name
     if (searchTerm) {
       filtered = filtered.filter((repo) =>
         repo.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
-    // Filtre par langage
+    // filter by language
     if (selectedLanguage !== "all") {
       filtered = filtered.filter((repo) =>
         repo.languages.some((lang) => lang.node.name === selectedLanguage)
       );
     }
 
-    // Tri
+    // filter by date
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "createdAt":
@@ -81,7 +81,7 @@ function Home() {
           +
         </Link>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
 
           <select
