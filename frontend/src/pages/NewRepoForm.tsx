@@ -10,10 +10,13 @@ import useRepos from "../services/useRepos";
 import type { Repos } from "../types/repos.type";
 
 const initialRepo = {
+  createdAt: "",
   description: "",
+  diskUsage: 0,
   isPrivate: false,
   languages: [{ size: 0, node: { name: "" } }],
   name: "",
+  updatedAt: "",
   url: "",
 };
 
