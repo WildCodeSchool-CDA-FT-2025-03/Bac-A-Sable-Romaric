@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import HeroBanner from "../components/HeroBanner";
 import LimitFilter from "../components/LimitFilter";
 import Pagination from "../components/Pagination";
 import RepoCard from "../components/RepoCard";
+import BtnLanguagesFilter from "../components/BtnLanguagesFilter";
+import BtnCreateRepo from "../components/BtnCreateRepo";
 
 import useRepos from "../services/useRepos";
-import BtnCreateRepo from "../components/BtnCreateRepo";
 
 function Home() {
   const { data, getAllRepos } = useRepos();
@@ -80,18 +81,11 @@ function Home() {
         <div className="flex flex-wrap gap-4">
           <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
 
-          <select
-            value={selectedLanguage}
-            onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="bg-slate-800 border border-slate-700 rounded-md px-3 py-1"
-          >
-            <option value="all">Tous les langages</option>
-            {allLanguages.map((lang) => (
-              <option key={lang} value={lang}>
-                {lang}
-              </option>
-            ))}
-          </select>
+          <BtnLanguagesFilter
+            selectedLanguage={selectedLanguage}
+            onLanguageChange={setSelectedLanguage}
+            allLanguages={allLanguages}
+          />
 
           <select
             value={sortBy}
