@@ -6,8 +6,8 @@ import logger from "../services/logger";
 const schema = Joi.object({
   createdAt: Joi.string(),
   description: Joi.string().required(),
-  diskUsage: Joi.number().required(),
-  id: Joi.string().required(),
+  diskUsage: Joi.number(),
+  id: Joi.string(),
   isPrivate: Joi.boolean().required(),
   languages: Joi.array().items(
     Joi.object({
