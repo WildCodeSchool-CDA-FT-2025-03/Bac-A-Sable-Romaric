@@ -36,8 +36,12 @@ function RepoPage() {
 
         <ul className="flex flex-wrap gap-2 pt-4">
           {oneRepo?.languages.map((language) => (
-            <li className="text-sm" key={language.node.name}>
-              {language.node.name}
+            <li className="flex items-center gap-1" key={language.node.name}>
+              <img
+                src={`/${language.node.name.toLowerCase()}.svg`}
+                alt={`${language.node.name} icon`}
+                className="w-10 h-10"
+              />
             </li>
           ))}
         </ul>
