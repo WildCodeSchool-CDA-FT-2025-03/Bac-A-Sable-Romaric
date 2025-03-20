@@ -10,7 +10,7 @@ function LimitFilter({ limit, setSearchParams }: LimitFilterProps) {
     <>
       <div>
         <label className="flex gap-4 items-center">
-          Nombre de repos affichés
+          Affichage
           <select
             className="bg-slate-900 text-white rounded-md border border-stone-700 px-2 py-1"
             name="limit"

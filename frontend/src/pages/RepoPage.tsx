@@ -32,7 +32,24 @@ function RepoPage() {
         </div>
         <p className="text-slate-300 italic">{oneRepo?.description}</p>
 
-        <p>{oneRepo?.url}</p>
+        <ul className="flex flex-col gap-2 text-slate-300">
+          <li>
+            URL:{" "}
+            <a
+              href={oneRepo?.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              {oneRepo?.url}
+            </a>
+          </li>
+          <li>Créé le: {oneRepo && new Date(oneRepo.createdAt).toLocaleDateString()}</li>
+          <li>
+            Dernière mise à jour: {oneRepo && new Date(oneRepo.updatedAt).toLocaleDateString()}
+          </li>
+          <li>Taille: {oneRepo?.diskUsage} KB</li>
+        </ul>
 
         <ul className="flex flex-wrap gap-2 pt-4">
           {oneRepo?.languages.map((language) => (
