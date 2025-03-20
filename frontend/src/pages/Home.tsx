@@ -6,6 +6,7 @@ import LimitFilter from "../components/LimitFilter";
 import Pagination from "../components/Pagination";
 import RepoCard from "../components/RepoCard";
 import BtnLanguagesFilter from "../components/BtnLanguagesFilter";
+import BtnDateOrNameFilter from "../components/BtnDateOrNameFilter";
 import BtnCreateRepo from "../components/BtnCreateRepo";
 
 import useRepos from "../services/useRepos";
@@ -87,15 +88,7 @@ function Home() {
             allLanguages={allLanguages}
           />
 
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="bg-slate-800 border border-slate-700 rounded-md px-3 py-1"
-          >
-            <option value="createdAt">Date de création</option>
-            <option value="updatedAt">Date de mise à jour</option>
-            <option value="name">Ordre alphabétique</option>
-          </select>
+          <BtnDateOrNameFilter sortBy={sortBy} onSortChange={setSortBy} />
         </div>
       </div>
 
