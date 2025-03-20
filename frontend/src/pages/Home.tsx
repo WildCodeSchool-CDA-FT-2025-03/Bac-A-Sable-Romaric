@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import HeroBanner from "../components/HeroBanner";
 import LimitFilter from "../components/LimitFilter";
 import Pagination from "../components/Pagination";
 import RepoCard from "../components/RepoCard";
+import BtnLanguagesFilter from "../components/BtnLanguagesFilter";
+import BtnDateOrNameFilter from "../components/BtnDateOrNameFilter";
+import BtnCreateRepo from "../components/BtnCreateRepo";
 
 import useRepos from "../services/useRepos";
 
@@ -74,38 +77,18 @@ function Home() {
       <HeroBanner searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
       <div className="container mx-auto px-4 w-full flex flex-wrap gap-4 justify-between items-center">
-        <Link
-          to="/repos/create"
-          className="bg-blue-900 hover:bg-blue-600 border border-blue-600 text-white text-lg font-bold rounded-md px-12 py-1 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]"
-        >
-          +
-        </Link>
+        <BtnCreateRepo />
 
         <div className="flex flex-wrap gap-4">
           <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
 
-          <select
-            value={selectedLanguage}
-            onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="bg-slate-800 border border-slate-700 rounded-md px-3 py-1"
-          >
-            <option value="all">Tous les langages</option>
-            {allLanguages.map((lang) => (
-              <option key={lang} value={lang}>
-                {lang}
-              </option>
-            ))}
-          </select>
+          <BtnLanguagesFilter
+            selectedLanguage={selectedLanguage}
+            onLanguageChange={setSelectedLanguage}
+            allLanguages={allLanguages}
+          />
 
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="bg-slate-800 border border-slate-700 rounded-md px-3 py-1"
-          >
-            <option value="createdAt">Date de création</option>
-            <option value="updatedAt">Date de mise à jour</option>
-            <option value="name">Ordre alphabétique</option>
-          </select>
+          <BtnDateOrNameFilter sortBy={sortBy} onSortChange={setSortBy} />
         </div>
       </div>
 
