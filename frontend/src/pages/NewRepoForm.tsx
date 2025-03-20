@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import CheckboxForm from "../components/forms/CheckboxForm";
 import InputForm from "../components/forms/InputForm";
@@ -10,13 +12,13 @@ import useRepos from "../services/useRepos";
 import type { Repos } from "../types/repos.type";
 
 const initialRepo = {
-  createdAt: "",
+  createdAt: new Date().toISOString(),
   description: "",
   diskUsage: 0,
   isPrivate: false,
   languages: [{ size: 0, node: { name: "" } }],
   name: "",
-  updatedAt: "",
+  updatedAt: new Date().toISOString(),
   url: "",
 };
 
@@ -50,11 +52,32 @@ function NewRepoForm() {
     e.preventDefault();
 
     try {
-      console.log(newRepo);
-      await addNewRepo(newRepo);
+      const currentDate = new Date().toISOString();
+      await addNewRepo({
+        ...newRepo,
+        createdAt: currentDate,
+        updatedAt: currentDate,
+      });
+
       setNewRepo(initialRepo);
+      toast.success("Le repository a été créé avec succès !", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } catch (error) {
       console.error(error);
+      toast.error("Une erreur est survenue lors de la création du repository.", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     }
   };
 
@@ -118,6 +141,8 @@ function NewRepoForm() {
           </button>
         </div>
       </form>
+
+      <ToastContainer />
     </>
   );
 }
