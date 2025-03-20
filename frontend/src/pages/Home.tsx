@@ -30,33 +30,31 @@ function Home() {
 
   return (
     <>
-      <div className="container mx-auto px-4 flex flex-col items-center justify-start">
-        <HeroBanner />
+      <HeroBanner />
 
-        <div className="w-full mb-12 flex justify-between items-center">
-          <Link
-            to="/repos/create"
-            className="bg-blue-900 hover:bg-blue-600 border border-blue-600 text-white text-lg font-bold rounded-md  px-12 py-1 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]"
-          >
-            +
-          </Link>
+      <div className="container mx-auto px-4 w-full mb-12 flex justify-between items-center">
+        <Link
+          to="/repos/create"
+          className="bg-blue-900 hover:bg-blue-600 border border-blue-600 text-white text-lg font-bold rounded-md  px-12 py-1 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]"
+        >
+          +
+        </Link>
 
-          <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
-        </div>
-
-        <section className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
-          {data.map((repo, index) => (
-            <RepoCard repo={repo} key={index} />
-          ))}
-        </section>
-
-        <Pagination
-          currentPage={currentPage}
-          limit={limit}
-          dataLength={data.length}
-          onPageChange={handlePageChange}
-        />
+        <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
       </div>
+
+      <section className="container mx-auto px-4 grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+        {data.map((repo, index) => (
+          <RepoCard repo={repo} key={index} />
+        ))}
+      </section>
+
+      <Pagination
+        currentPage={currentPage}
+        limit={limit}
+        dataLength={data.length}
+        onPageChange={handlePageChange}
+      />
     </>
   );
 }
