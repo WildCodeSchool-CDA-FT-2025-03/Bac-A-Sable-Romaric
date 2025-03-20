@@ -57,9 +57,14 @@ function NewRepoForm() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold">Ajouter un nouveau repo</h1>
+      <h1 className="text-2xl font-bold w-full h-96 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-slate-900 to-stone-950">
+        Ajouter un nouveau repo
+      </h1>
 
-      <form className="container mx-auto px-4 flex flex-col gap-4" onSubmit={handleSubmitRepo}>
+      <form
+        className="container mx-auto px-4 lg:max-w-2xl flex flex-col gap-4"
+        onSubmit={handleSubmitRepo}
+      >
         <InputForm
           title="Nom du repo"
           name="name"
