@@ -1,12 +1,13 @@
 import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
+
 import logger from "../services/logger";
 
 // Schema to validate the data of the repo for creation
 const schema = Joi.object({
-  createdAt: Joi.string(),
+  createdAt: Joi.string().required(),
   description: Joi.string().required(),
-  diskUsage: Joi.number(),
+  diskUsage: Joi.number().required(),
   id: Joi.string(),
   isPrivate: Joi.boolean().required(),
   languages: Joi.array().items(
@@ -18,7 +19,7 @@ const schema = Joi.object({
     })
   ),
   name: Joi.string().required(),
-  updatedAt: Joi.string(),
+  updatedAt: Joi.string().required(),
   url: Joi.string().required(),
 });
 
