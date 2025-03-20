@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import useRepos from "../services/useRepos";
 
 function RepoPage() {
@@ -17,11 +17,42 @@ function RepoPage() {
 
   return (
     <>
-      <h1>Page du repo {oneRepo?.name}</h1>
-      <p>{oneRepo?.description}</p>
-      <p>{oneRepo?.url}</p>
-      <p>{oneRepo?.isPrivate ? "Private" : "Public"}</p>
-      {oneRepo && oneRepo.languages.map((lang) => <h4>{lang.node.name}</h4>)}
+      <h1 className="text-3xl font-bold w-full h-96 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-slate-900 to-stone-950">
+        {oneRepo?.name}
+      </h1>
+      <section className="container mx-auto lg:max-w-2xl flex flex-col justify-center items-start gap-4 border border-slate-800 rounded-lg p-4 bg-gradient-to-b from-slate-900 to-stone-950">
+        <div className="w-full flex justify-end">
+          <span
+            className={`text-xs ${
+              oneRepo?.isPrivate ? "text-orange-600" : "text-green-600"
+            } border rounded-md px-2 py-1`}
+          >
+            {oneRepo?.isPrivate ? "Private" : "Public"}
+          </span>
+        </div>
+        <p className="text-slate-300 italic">{oneRepo?.description}</p>
+
+        <p>{oneRepo?.url}</p>
+
+        <ul className="flex flex-wrap gap-2 pt-4">
+          {oneRepo?.languages.map((language) => (
+            <li className="flex items-center gap-1" key={language.node.name}>
+              <img
+                src={`/${language.node.name.toLowerCase()}.svg`}
+                alt={`${language.node.name} icon`}
+                className="w-10 h-10"
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <Link
+        to="/"
+        className="container mx-auto lg:max-w-2xl py-6 text-center bg-gradient-to-b from-slate-900 to-stone-950 text-white rounded-md border border-slate-700 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.2)]"
+      >
+        {`<< Retour à l'accueil`}
+      </Link>
     </>
   );
 }

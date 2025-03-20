@@ -9,7 +9,7 @@ function RepoCard({ repo }: Props) {
   return (
     <>
       <Link to={`/repos/${repo.id}`}>
-        <div className="min-h-36 flex flex-col justify-between border border-slate-800 rounded-lg p-4 bg-gradient-to-b from-slate-900 to-stone-950 transition-transform duration-200 hover:scale-103 hover:bg-gradient-to-t hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]">
+        <div className="min-h-36 flex flex-col justify-between border border-slate-800 rounded-lg p-4 bg-gradient-to-b from-slate-900 to-stone-950 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]">
           <div className="flex justify-between items-start">
             <h2 className="text-lg font-bold">{repo.name}</h2>
             <span
