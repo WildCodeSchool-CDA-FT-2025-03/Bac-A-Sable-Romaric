@@ -7,6 +7,7 @@ import Pagination from "../components/Pagination";
 import RepoCard from "../components/RepoCard";
 
 import useRepos from "../services/useRepos";
+import BtnCreateRepo from "../components/BtnCreateRepo";
 
 function Home() {
   const { data, getAllRepos } = useRepos();
@@ -74,12 +75,7 @@ function Home() {
       <HeroBanner searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
       <div className="container mx-auto px-4 w-full flex flex-wrap gap-4 justify-between items-center">
-        <Link
-          to="/repos/create"
-          className="bg-blue-900 hover:bg-blue-600 border border-blue-600 text-white text-lg font-bold rounded-md px-12 py-1 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]"
-        >
-          +
-        </Link>
+        <BtnCreateRepo />
 
         <div className="flex flex-wrap gap-4">
           <LimitFilter limit={limit.toString()} setSearchParams={setSearchParams} />
