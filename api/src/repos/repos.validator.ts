@@ -4,33 +4,41 @@ import logger from "../services/logger";
 
 // Schema to validate the data of the repo for creation
 const schema = Joi.object({
+  createdAt: Joi.string(),
   description: Joi.string().required(),
+  diskUsage: Joi.number(),
+  id: Joi.string(),
   isPrivate: Joi.boolean().required(),
   languages: Joi.array().items(
     Joi.object({
-      size: Joi.number().required(),
+      size: Joi.number(),
       node: Joi.object({
         name: Joi.string(),
       }),
     })
   ),
   name: Joi.string().required(),
+  updatedAt: Joi.string(),
   url: Joi.string().required(),
 });
 
 // Schema for partial updates - all fields are optional
 const updateSchema = Joi.object({
+  createdAt: Joi.string(),
   description: Joi.string(),
+  diskUsage: Joi.number(),
+  id: Joi.string(),
   isPrivate: Joi.boolean(),
   languages: Joi.array().items(
     Joi.object({
-      size: Joi.number().required(),
+      size: Joi.number(),
       node: Joi.object({
         name: Joi.string(),
       }),
     })
   ),
   name: Joi.string(),
+  updatedAt: Joi.string(),
   url: Joi.string(),
 });
 

@@ -30,9 +30,15 @@ function RepoPage() {
             {oneRepo?.isPrivate ? "Private" : "Public"}
           </span>
         </div>
-        <p className="text-slate-300 italic">{oneRepo?.description}</p>
+        <p className="pb-4 text-slate-300 italic">{oneRepo?.description}</p>
 
-        <p>{oneRepo?.url}</p>
+        <ul className="flex flex-col gap-2 text-slate-300">
+          <li>Créé le: {oneRepo && new Date(oneRepo.createdAt).toLocaleDateString()}</li>
+          <li>
+            Dernière mise à jour: {oneRepo && new Date(oneRepo.updatedAt).toLocaleDateString()}
+          </li>
+          <li>Taille: {oneRepo?.diskUsage} KB</li>
+        </ul>
 
         <ul className="flex flex-wrap gap-2 pt-4">
           {oneRepo?.languages.map((language) => (
@@ -45,6 +51,15 @@ function RepoPage() {
             </li>
           ))}
         </ul>
+
+        <Link
+          className="w-full py-4 mt-4 text-white text-center text-lg font-bold rounded-md bg-blue-900 hover:bg-blue-600 border border-blue-600 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]"
+          to={`${oneRepo?.url}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Voir sur GitHub
+        </Link>
       </section>
 
       <Link

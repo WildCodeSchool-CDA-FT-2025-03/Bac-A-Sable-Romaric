@@ -1,14 +1,19 @@
 [
   {
+    "createdAt": "2025-03-06T11:12:25Z",
     "description": "Find and register your cards",
+    "diskUsage": 0,
     "id": "R_kgDOOEH4Pw",
     "isPrivate": false,
     "languages": [],
     "name": "magicfinder",
+    "updatedAt": "2025-03-11T21:37:03Z",
     "url": "https://github.com/Yiroma/magicfinder"
   },
   {
+    "createdAt": "2024-02-26T09:20:39Z",
     "description": "Landing page for my client Taxi Loire Valley Services",
+    "diskUsage": 1129,
     "id": "R_kgDOLYD4JQ",
     "isPrivate": true,
     "languages": [
@@ -17,10 +22,13 @@
       { "size": 28733, "node": { "name": "CSS" } }
     ],
     "name": "LoireValleyServices",
+    "updatedAt": "2025-03-11T21:41:15Z",
     "url": "https://github.com/Yiroma/LoireValleyServices"
   },
   {
+    "createdAt": "2025-02-24T14:17:16Z",
     "description": "nutriments calculator's application",
+    "diskUsage": 9167,
     "id": "R_kgDON-s2OA",
     "isPrivate": false,
     "languages": [
@@ -29,10 +37,13 @@
       { "size": 345, "node": { "name": "CSS" } }
     ],
     "name": "nutriview",
+    "updatedAt": "2025-03-11T21:34:48Z",
     "url": "https://github.com/Yiroma/nutriview"
   },
   {
+    "createdAt": "2024-12-02T12:58:49Z",
     "description": "Next.js static website for my portfolio",
+    "diskUsage": 2372,
     "id": "R_kgDONXw1iQ",
     "isPrivate": false,
     "languages": [
@@ -40,10 +51,13 @@
       { "size": 80, "node": { "name": "JavaScript" } }
     ],
     "name": "yiromaric-portfolio-2024-nextjs-static-website",
+    "updatedAt": "2025-03-11T21:43:18Z",
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs-static-website"
   },
   {
+    "createdAt": "2024-09-10T15:02:02Z",
     "description": "Portfolio 2024 created with Next.js",
+    "diskUsage": 2829,
     "id": "R_kgDOMvoCAA",
     "isPrivate": false,
     "languages": [
@@ -52,10 +66,13 @@
       { "size": 384873, "node": { "name": "HTML" } }
     ],
     "name": "yiromaric-portfolio-2024-nextjs",
+    "updatedAt": "2025-03-11T21:44:41Z",
     "url": "https://github.com/Yiroma/yiromaric-portfolio-2024-nextjs"
   },
   {
+    "createdAt": "2024-09-10T13:39:32Z",
     "description": "creation of a Next.js template",
+    "diskUsage": 190,
     "id": "R_kgDOMvlTjg",
     "isPrivate": true,
     "languages": [
@@ -63,10 +80,13 @@
       { "size": 59, "node": { "name": "CSS" } }
     ],
     "name": "template-nextjs",
+    "updatedAt": "2025-03-11T21:46:56Z",
     "url": "https://github.com/Yiroma/template-nextjs"
   },
   {
+    "createdAt": "2024-09-03T09:08:43Z",
     "description": "Next.js website tutorial",
+    "diskUsage": 775,
     "id": "R_kgDOMsFTrw",
     "isPrivate": false,
     "languages": [
@@ -74,10 +94,13 @@
       { "size": 58, "node": { "name": "CSS" } }
     ],
     "name": "yiroma-website-nextjs",
+    "updatedAt": "2025-03-11T21:48:35Z",
     "url": "https://github.com/Yiroma/yiroma-website-nextjs"
   },
   {
+    "createdAt": "2023-06-02T21:24:53Z",
     "description": "Vanilla portfolio",
+    "diskUsage": 12137,
     "id": "R_kgDOJqv5EA",
     "isPrivate": false,
     "languages": [
@@ -86,10 +109,13 @@
       { "size": 13627, "node": { "name": "CSS" } }
     ],
     "name": "Portfolio",
+    "updatedAt": "2025-03-11T21:49:30Z",
     "url": "https://github.com/Yiroma/Portfolio"
   },
   {
+    "createdAt": "2024-06-03T14:41:22Z",
     "description": "training tutorial with Next.js",
+    "diskUsage": 56,
     "id": "R_kgDOMEUiXA",
     "isPrivate": false,
     "languages": [
@@ -98,10 +124,13 @@
       { "size": 227, "node": { "name": "JavaScript" } }
     ],
     "name": "next-training-app",
+    "updatedAt": "2025-03-11T21:50:36Z",
     "url": "https://github.com/Yiroma/next-training-app"
   },
   {
+    "createdAt": "2024-04-02T20:09:12Z",
     "description": "A vanilla mini-game training",
+    "diskUsage": 2,
     "id": "R_kgDOLo8k4A",
     "isPrivate": false,
     "languages": [
@@ -110,18 +139,24 @@
       { "size": 591, "node": { "name": "CSS" } }
     ],
     "name": "tryToClickMe",
+    "updatedAt": "2025-03-11T21:52:34Z",
     "url": "https://github.com/Yiroma/tryToClickMe"
   },
   {
+    "createdAt": "2023-07-26T13:13:43Z",
     "description": "Yiroma's Skills",
+    "diskUsage": 5,
     "id": "R_kgDOJ_-nPQ",
     "isPrivate": false,
     "languages": [],
     "name": "Yiroma",
+    "updatedAt": "2025-03-11T21:53:05Z",
     "url": "https://github.com/Yiroma/Yiroma"
   },
   {
+    "createdAt": "2023-12-27T12:50:44Z",
     "description": "Various javascript & react exercises",
+    "diskUsage": 228,
     "id": "R_kgDOK-KV0w",
     "isPrivate": false,
     "languages": [
@@ -130,10 +165,13 @@
       { "size": 6956, "node": { "name": "CSS" } }
     ],
     "name": "WCS-Training",
+    "updatedAt": "2025-03-11T21:53:59Z",
     "url": "https://github.com/Yiroma/WCS-Training"
   },
   {
+    "createdAt": "2023-10-16T13:21:25Z",
     "description": "Full-stack project for my web developer certification",
+    "diskUsage": 8757,
     "id": "R_kgDOKg-utA",
     "isPrivate": false,
     "languages": [
@@ -142,10 +180,13 @@
       { "size": 27727, "node": { "name": "SCSS" } }
     ],
     "name": "Blog-DevMX",
+    "updatedAt": "2025-03-11T21:57:19Z",
     "url": "https://github.com/Yiroma/Blog-DevMX"
   },
   {
+    "createdAt": "2023-09-15T13:32:32Z",
     "description": "Minimal template fullstack project",
+    "diskUsage": 80,
     "id": "R_kgDOKUAPyg",
     "isPrivate": false,
     "languages": [
@@ -154,10 +195,13 @@
       { "size": 59, "node": { "name": "CSS" } }
     ],
     "name": "Minimal-fullStack-js-template",
+    "updatedAt": "2025-03-11T21:58:25Z",
     "url": "https://github.com/Yiroma/Minimal-fullStack-js-template"
   },
   {
+    "createdAt": "2023-09-28T15:33:55Z",
     "description": "Training to glassmorphism effect",
+    "diskUsage": 181,
     "id": "R_kgDOKZhEQg",
     "isPrivate": false,
     "languages": [
@@ -166,18 +210,24 @@
       { "size": 3580, "node": { "name": "SCSS" } }
     ],
     "name": "Glassmorphism-Card-Hover-Effects",
+    "updatedAt": "2025-03-11T22:00:01Z",
     "url": "https://github.com/Yiroma/Glassmorphism-Card-Hover-Effects"
   },
   {
+    "createdAt": "2023-09-12T08:18:01Z",
     "description": "Wild Code School quest : homer's odyssey",
+    "diskUsage": 0,
     "id": "R_kgDOKSd6Ag",
     "isPrivate": false,
     "languages": [],
     "name": "homers-odyssey",
+    "updatedAt": "2025-03-11T22:00:58Z",
     "url": "https://github.com/Yiroma/homers-odyssey"
   },
   {
+    "createdAt": "2023-09-04T19:19:53Z",
     "description": "FrontEnd Mentor challenge - create a profile card",
+    "diskUsage": 68,
     "id": "R_kgDOKPVWAQ",
     "isPrivate": false,
     "languages": [
@@ -185,10 +235,13 @@
       { "size": 2598, "node": { "name": "CSS" } }
     ],
     "name": "profile-card-component-FrontendMENTOR",
+    "updatedAt": "2025-03-11T22:01:51Z",
     "url": "https://github.com/Yiroma/profile-card-component-FrontendMENTOR"
   },
   {
+    "createdAt": "2023-08-30T18:27:28Z",
     "description": "Ideas CSS",
+    "diskUsage": 3,
     "id": "R_kgDOKNdsLQ",
     "isPrivate": false,
     "languages": [
@@ -196,10 +249,13 @@
       { "size": 1543, "node": { "name": "CSS" } }
     ],
     "name": "CSS-tricks",
+    "updatedAt": "2025-03-11T22:02:31Z",
     "url": "https://github.com/Yiroma/CSS-tricks"
   },
   {
+    "createdAt": "2023-06-25T19:28:16Z",
     "description": "Wild Code School Checkpoint 4 - create a solo fullstack project",
+    "diskUsage": 1132,
     "id": "R_kgDOJz8uHg",
     "isPrivate": false,
     "languages": [
@@ -210,10 +266,13 @@
       { "size": 5620, "node": { "name": "SCSS" } }
     ],
     "name": "Check_4_ToDoList",
+    "updatedAt": "2025-03-11T22:04:54Z",
     "url": "https://github.com/Yiroma/Check_4_ToDoList"
   },
   {
+    "createdAt": "2023-07-14T13:06:37Z",
     "description": "Original Wild Code School template fullstack js react",
+    "diskUsage": 499,
     "id": "R_kgDOJ7itIQ",
     "isPrivate": false,
     "languages": [
@@ -224,10 +283,13 @@
       { "size": 818, "node": { "name": "Dockerfile" } }
     ],
     "name": "Template_FullStack_JS_React",
+    "updatedAt": "2025-03-11T22:06:48Z",
     "url": "https://github.com/Yiroma/Template_FullStack_JS_React"
   },
   {
+    "createdAt": "2023-08-25T09:36:30Z",
     "description": "Wild Code School - Prisma live DEMO",
+    "diskUsage": 4836,
     "id": "R_kgDOKLVL9w",
     "isPrivate": false,
     "languages": [
@@ -238,10 +300,13 @@
       { "size": 818, "node": { "name": "Dockerfile" } }
     ],
     "name": "WCS_PRISMA",
+    "updatedAt": "2025-03-11T22:07:41Z",
     "url": "https://github.com/Yiroma/WCS_PRISMA"
   },
   {
+    "createdAt": "2023-07-10T22:03:24Z",
     "description": "Wild Code School - Hackathon 2 - smartphone evaluator for Emmaüs Connect",
+    "diskUsage": 1055,
     "id": "R_kgDOJ6C4gw",
     "isPrivate": false,
     "languages": [
@@ -252,10 +317,13 @@
       { "size": 39498, "node": { "name": "SCSS" } }
     ],
     "name": "Hackathon2-cHackahuete",
+    "updatedAt": "2025-03-11T22:09:52Z",
     "url": "https://github.com/Yiroma/Hackathon2-cHackahuete"
   },
   {
+    "createdAt": "2023-05-17T09:29:59Z",
     "description": "Wild Code School - Project 2 - first React application",
+    "diskUsage": 16240,
     "id": "R_kgDOJkHFMw",
     "isPrivate": false,
     "languages": [
@@ -266,10 +334,13 @@
       { "size": 21448, "node": { "name": "CSS" } }
     ],
     "name": "NutriDrive",
+    "updatedAt": "2025-03-11T22:12:57Z",
     "url": "https://github.com/Yiroma/NutriDrive"
   },
   {
+    "createdAt": "2023-04-27T14:50:47Z",
     "description": "Another template js fullstack",
+    "diskUsage": 41,
     "id": "R_kgDOJcHhQw",
     "isPrivate": false,
     "languages": [
@@ -280,10 +351,13 @@
       { "size": 976, "node": { "name": "CSS" } }
     ],
     "name": "js-template-fullstack",
+    "updatedAt": "2025-03-11T22:13:35Z",
     "url": "https://github.com/Yiroma/js-template-fullstack"
   },
   {
+    "createdAt": "2023-04-03T21:51:07Z",
     "description": "Wild Code School - Project1 - First single page website vanilla js",
+    "diskUsage": 20,
     "id": "R_kgDOJSUXDw",
     "isPrivate": false,
     "languages": [
@@ -292,6 +366,7 @@
       { "size": 8497, "node": { "name": "CSS" } }
     ],
     "name": "TODOWILD_Yiroma",
+    "updatedAt": "2025-03-11T22:14:32Z",
     "url": "https://github.com/Yiroma/TODOWILD_Yiroma"
   }
 ]

@@ -3,6 +3,7 @@ import { Repos } from "../types/repos.type";
 
 type Props = {
   repo: Repos;
+  filterType?: "created" | "updated" | "alphabetical";
 };
 
 function RepoCard({ repo }: Props) {
@@ -12,6 +13,7 @@ function RepoCard({ repo }: Props) {
         <div className="min-h-36 flex flex-col justify-between border border-slate-800 rounded-lg p-4 bg-gradient-to-b from-slate-900 to-stone-950 transition-transform duration-200 hover:scale-103 hover:shadow-[0px_4px_20px_rgba(255,255,255,0.1)]">
           <div className="flex justify-between items-start">
             <h2 className="text-lg font-bold">{repo.name}</h2>
+
             <span
               className={`text-xs ${
                 repo.isPrivate ? "text-orange-600" : "text-green-600"
@@ -21,6 +23,7 @@ function RepoCard({ repo }: Props) {
             </span>
           </div>
           <p className="text-slate-500 italic">{repo.description}</p>
+
           <ul className="flex flex-wrap gap-2 pt-4">
             {repo.languages.map((language) => (
               <li className="text-sm" key={language.node.name}>
