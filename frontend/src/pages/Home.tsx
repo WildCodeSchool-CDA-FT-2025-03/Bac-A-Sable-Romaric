@@ -65,6 +65,7 @@ function Home() {
   const handlePageChange = (newPage: number) => {
     setSearchParams({
       page: newPage.toString(),
+      limit: limit.toString(),
     });
   };
 
