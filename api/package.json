@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "getRepo": "gh repo list yiroma --json id,name,description,isPrivate,languages,url,createdAt,updatedAt,diskUsage > data.json",
-    "dev": "ts-node-dev ./src/index.ts"
+    "dev": "ts-node-dev ./src/index.ts",
+    "build": "npx tsc",
+    "prod": "node ./build/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +16,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "joi": "^17.13.3",
-    "winston": "^3.17.0"
+    "winston": "^3.17.0",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
