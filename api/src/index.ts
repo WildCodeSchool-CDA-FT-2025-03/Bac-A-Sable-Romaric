@@ -7,7 +7,6 @@ const app = express();
 
 const PORT = process.env.EXPRESS_SERVER_PORT || 3000;
 
-// Allow requests from deployed frontend in production, or localhost in development
 const corsOptions =
   process.env.NODE_ENV === "production"
     ? { origin: true } // Allow all origins in production
