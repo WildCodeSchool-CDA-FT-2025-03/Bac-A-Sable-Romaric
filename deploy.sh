@@ -1,6 +1,6 @@
 cd Bac_A_Sable_Romaric/ # O se déplace a la racine du dossier de projet
 
-git switch deploy@docker # On force la bascule sur notre branche de référence (main en cas de merge)
+git switch main # On force la bascule sur notre branche de référence (main en cas de merge)
 
 git pull # On met à jour la branche
 
