@@ -12,8 +12,8 @@ jobs: # Liste des actions  à réaliser
       - name: Deploy to VPS # Nom arbitraire de l'étape (Attention, ce nom sera un indicateur dans le terminal GitHub, soyons précis)
         uses: appleboy/ssh-action@master # Utilisation d'un service Tiers, ici un serive de connexion ssh **
         with:
-          username: $SSH_USER # Info nécessaire à la connexion SSH
-          host: $SSH_HOST # Info nécessaire à la connexion SSH
-          password: $SSH_PASSWORD # Info nécessaire à la connexion SSH
-          port: $SSH_PORT # Info nécessaire à la connexion SSH
+          username: ${{ secrets.SSH_USER }} # Info nécessaire à la connexion SSH
+          host: ${{ secrets.SSH_HOST }} # Info nécessaire à la connexion SSH
+          password: ${{ secrets.SSH_PASSWORD }} # Info nécessaire à la connexion SSH
+          port: ${{ secrets.SSH_PORT }} # Info nécessaire à la connexion SSH
           script: cd ./Bac_A_Sable_Romaric && bash ./deploy.sh # Commande éxécuter par le service une fois la connexion faite (A adapter à votre context)
