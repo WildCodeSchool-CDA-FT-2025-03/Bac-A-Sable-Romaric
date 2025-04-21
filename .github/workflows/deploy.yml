@@ -16,4 +16,10 @@ jobs: # Liste des actions  à réaliser
           host: ${{ secrets.SSH_HOST }} # Info nécessaire à la connexion SSH
           password: ${{ secrets.SSH_PASSWORD }} # Info nécessaire à la connexion SSH
           port: ${{ secrets.SSH_PORT }} # Info nécessaire à la connexion SSH
-          script: cd ./Bac_A_Sable_Romaric && ./bash deploy.sh # Commande éxécuter par le service une fois la connexion faite (A adapter à votre context)
+          script: |
+            echo "Vérification des répertoires..."
+            ls -la
+
+            # Vérifier si le script deploy.sh existe
+            if [ -f ./deploy.sh ]; then
+          script: cd Bac_A_Sable_Romaric && bash deploy.sh # Commande éxécuter par le service une fois la connexion faite (A adapter à votre context)
