@@ -7,7 +7,12 @@ const app = express();
 
 const PORT = process.env.EXPRESS_SERVER_PORT || 3000;
 
-app.use(cors({ origin: "http://localhost:5174" }));
+const corsOptions =
+  process.env.NODE_ENV === "production"
+    ? { origin: true } // Allow all origins in production
+    : { origin: "http://localhost:4173" };
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use("/api", router);

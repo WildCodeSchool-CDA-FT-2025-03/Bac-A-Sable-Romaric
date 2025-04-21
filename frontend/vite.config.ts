@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   preview: {
+    host: "0.0.0.0",
     allowedHosts: ["odyssey.remote-cda9.wilders.dev", "remote-cda9.wilders.dev"],
   },
 });

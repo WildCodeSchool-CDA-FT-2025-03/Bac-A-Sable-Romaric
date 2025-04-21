@@ -1,0 +1,17 @@
+services:
+  api:
+    build: ./api
+    command: npm run prod
+    restart: always
+    ports:
+      - 4000:4000
+    environment:
+      - EXPRESS_SERVER_PORT=4000
+      - NODE_ENV=production
+
+  client:
+    build: ./frontend
+    command: npm run preview
+    restart: always
+    ports:
+      - 4173:4173
